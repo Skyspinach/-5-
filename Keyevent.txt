@@ -1,0 +1,65 @@
+指纹键
+/dev/input/event9: 0001 0060 00000001
+/dev/input/event9: 0000 0000 00000000
+/dev/input/event9: 0001 0060 00000000
+/dev/input/event9: 0000 0000 00000000
+
+十进制：0060 ——>  96
+
+
+菜单键
+/dev/input/event2: 0001 008b 00000001
+/dev/input/event2: 0000 0000 00000000
+/dev/input/event2: 0001 008b 00000000
+/dev/input/event2: 0000 0000 00000000
+
+十进制：008b ——>  139
+
+
+返回键
+/dev/input/event2: 0001 009e 00000001
+/dev/input/event2: 0000 0000 00000000
+/dev/input/event2: 0001 009e 00000000
+/dev/input/event2: 0000 0000 00000000
+
+十进制：009e ——>  158
+
+
+主页键
+/dev/input/event5: 0001 0066 00000001
+
+十进制：0066 ——>  102
+
+
+音量上
+/dev/input/event5: 0001 0073 00000001
+/dev/input/event5: 0000 0000 00000000
+/dev/input/event5: 0001 0073 00000000
+/dev/input/event5: 0000 0000 00000000
+
+十进制：0073 ——>  115
+
+音量下
+/dev/input/event0: 0001 0072 00000001
+/dev/input/event0: 0000 0000 00000000
+/dev/input/event0: 0001 0072 00000000
+/dev/input/event0: 0000 0000 00000000
+
+十进制：0072 ——>  114
+
+电源键
+/dev/input/event0: 0001 0074 00000001
+/dev/input/event0: 0000 0000 00000000
+/dev/input/event0: 0001 0074 00000000
+/dev/input/event0: 0000 0000 00000000
+
+十进制：0074 ——>  116
+
+
+源码/frameworks/base/core/java/android/view/KeyEvent.java中找到;
+二、sendevent: 
+
+
+命令格式 : sendevent [device] [type] [code] [value]
+
+需要注意的是在 getevent 中code显示的是十六进制, 而sendevent 中需要用 十进制

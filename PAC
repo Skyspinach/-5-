@@ -1,0 +1,4 @@
+function FindProxyForURL(url, host) { 
+  
+  return "PROXY 172.18.100.138:810; DIRECT; PROXY 172.18.102.110:811";
+} 
