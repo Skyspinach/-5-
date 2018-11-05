@@ -1,0 +1,6 @@
+function FindProxyForURL(url, host)
+{
+    if (isInNet(host, "192.168.1.0", "255.255.255.0"))
+        return "DIRECT";
+return "SOCKS 172.18.102.110:811; SOCKS 172.18.100.138:810; DIRECT ";
+}
